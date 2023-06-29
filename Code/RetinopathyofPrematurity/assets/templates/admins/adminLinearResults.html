@@ -1,0 +1,50 @@
+{%extends 'admins/adminbase.html'%}
+{%load static%}
+
+{%block contents%}
+<div class="site-section bg-info">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-12 text-center"><br/><br/><br/><br/><br/><br/><br/>
+            <span class="text-cursive h5 text-red d-block">Classification You Like</span>
+            <h2 class="text-white">Linear Model Results</h2>
+               <table border="2px" class="table table-hover table-dark">
+                    <thead>
+                    <tr class="table-danger">
+                        <th scope="col">S.No</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Accuracy</th>
+                        <th scope="col">Precesion</th>
+                        <th scope="col">Recall</th>
+                        <th scope="col">Chi Square Test</th>
+
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for i in data %}
+                    <tr scope="row" style="color: BLUE; background-color:#FFFCBB">
+                        <td>{{forloop.counter}}</td>
+                        <td>{{i.name}}</td>
+                        <td>{{i.accuracy}}</td>
+                        <td>{{i.precesion}}</td>
+                        <td>{{i.recall}}</td>
+                        <td>{{i.chitest}}</td>
+
+
+
+                    </tr>
+                    {% endfor %}
+
+
+                    </tbody>
+                </table>
+
+          </div>
+        </div>
+        <div class="row">
+
+        </div>
+      </div>
+    </div>
+
+{%endblock%}

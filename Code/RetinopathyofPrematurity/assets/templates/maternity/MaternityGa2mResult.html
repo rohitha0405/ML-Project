@@ -1,0 +1,26 @@
+{%extends 'maternity/maternitybase.html'%}
+{%load static%}
+
+{%block contents%}
+<div class="site-section bg-info">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-12 text-center"><br/><br/><br/><br/><br/><br/><br/>
+            <span class="text-cursive h5 text-red d-block">Classification You Like</span>
+            <h2 class="text-white">Generalized Additive Model</h2>
+              <h2 class="mb-3 font-weight-bold text-teal">
+                  Scale  <strong class="btn btn-block btn-primary text-white py-3 px-5"> {{scale}}</strong> <br/>
+                  Deviance <strong class="btn btn-block btn-primary text-white py-3 px-5"> {{deviance}} </strong><br/>
+                  Pearson_chi Square <strong class="btn btn-block btn-primary text-white py-3 px-5">{{pearson_chi2}}</strong> <br/>
+                  llf Low-Level Features  <strong class="btn btn-block btn-primary text-white py-3 px-5">{{llf}}</strong> <br/>
+
+              </h2>
+          </div>
+        </div>
+        <div class="row">
+
+        </div>
+      </div>
+    </div>
+
+{%endblock%}

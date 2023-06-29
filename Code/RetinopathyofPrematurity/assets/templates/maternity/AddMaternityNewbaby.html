@@ -1,0 +1,117 @@
+{%extends 'maternity/maternitybase.html'%}
+{%load static%}
+
+{%block contents%}
+<div class="site-section bg-info">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-12 text-center">
+            <span class="text-cursive h5 text-red d-block">Classification You Like</span>
+            <h2 class="text-white">Generalized Additive Model</h2>
+          </div>
+        </div>
+        <div class="row">
+
+         <h2 class="text-white">Adding New born baby Data </h2>
+              <form action="{%url 'MaternityAddDataAction'%}" method="POST" class="text-primary" style="width:100%">
+                    {% csrf_token %}
+                    <table border="2px" class="table table-hover table-dark">
+                        <tr>
+                            <td class="text-primary">Gestational Week</td>
+                            <td>{{form.gestationalweek}}</td>
+                            <td>Min Week 28 to 40</td>
+                        </tr>
+                        <tr>
+                            <td>Mechanical Ventilation</td>
+                            <td>{{form.mechanicalventilation}}</td>
+                            <td>Normal = 12 mL/kg ideal body</td>
+                        </tr>
+                        <tr>
+                            <td>Blood Transfusion</td>
+                            <td>{{form.bloodtransfusion}}</td>
+                            <td>level of 7 g per dL (70 g per L)</td>
+                        </tr>
+                        <tr>
+                            <td>Gender</td>
+                            <td>{{form.gender}}</td>
+                            <td>Male = 1, Female = 0</td>
+                        </tr>
+                        <tr>
+                            <td>Lateonset Sepsis</td>
+                            <td>{{form.lateonsetsepsis}}</td>
+                            <td>Min value = 0 max value = 70</td>
+                        </tr>
+                        <tr>
+                            <td>Chorioamnionitis</td>
+                            <td>{{form.chorioamnionitis}}</td>
+                            <td>Min Value =1 Max Value=7</td>
+                        </tr>
+                        <tr>
+                            <td>Preterm Premature Ruptureof Membranes</td>
+                            <td>{{form.pretermprematureruptureofmembranes}}</td>
+                            <td> Min Week Value = 30 Max Week Value = 40</td>
+                        </tr>
+                        <tr>
+                            <td>Antenatal Steroid Therapy</td>
+                            <td>{{form.antenatalsteroidtherapy}}</td>
+                            <td>Min Week Value = 24 Max Week Value = 30</td>
+                        </tr>
+                        <tr>
+                            <td>Respiratory Distress Syndrome</td>
+                            <td>{{form.respiratorydistresssyndrome}}</td>
+                            <td>Week >30 and above</td>
+                        </tr>
+                        <tr>
+                            <td>Dopamin Dobutamin</td>
+                            <td>{{form.dopamindobutamin}}</td>
+                            <td>Values 2 to 15 µg/kg per min</td>
+                        </tr>
+
+                        <tr>
+                            <td>Necrotizing Enterocolitis</td>
+                            <td>{{form.necrotizingenterocolitis}}</td>
+                            <td>Weight In Grams in 30 Weeks </td>
+                        </tr>
+                        <tr>
+                            <td>Intraventricular Hemorrhage</td>
+                            <td>{{form.intraventricularhemorrhage}}</td>
+                            <td>Min Value =  0 and max value = 23 </td>
+                        </tr>
+                        <tr>
+                            <td>Constant</td>
+                            <td>{{form.constant}}</td>
+                            <td>Min Value = 33 Max Value =35 in cm</td>
+                        </tr>
+                        <tr>
+                            <td>Weight</td>
+                            <td>{{form.weight}}</td>
+                            <td>Weight In Grams</td>
+                        </tr>
+                        <tr><td></td>
+                            <td>
+                               <button class="btn btn-block btn-primary text-white py-3 px-5"
+                                        type="submit">
+                                    Add Data
+                                </button>
+                            </td>
+                            <td></td>
+                        </tr>
+
+                        {% if messages %}
+                        {% for message in messages %}
+                        <font color='GREEN'> {{ message }}</font>
+                        {% endfor %}
+                        {% endif %}
+
+                    </table>
+
+                </form>
+
+             </div>
+            </div>
+
+        </div>
+      </div>
+    </div>
+
+{%endblock%}

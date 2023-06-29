@@ -1,0 +1,72 @@
+{%extends 'users/userbase.html'%}
+{%load static%}
+{%block contents%}
+<div class="site-section bg-info">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-14 text-center"><br/><br/><br/>
+            <span class="text-cursive h5 text-red d-block">Classification You Like</span>
+            <h2 class="text-white">Generalized Additive Model</h2>
+          </div>
+        </div>
+        <div class="row">
+              <h1 class="mb-3 font-weight-bold text-teal">View All Data</h1>
+
+                 <table border="2px" class="table table-hover table-dark">
+                    <thead>
+                    <tr class="table-danger">
+                        <th scope="col">S.No</th>
+                        <th scope="col">GW week</th>
+                        <th scope="col">ventilation</th>
+                        <th scope="col">blood </th>
+                        <th scope="col">gender</th>
+                        <th scope="col">sepsis</th>
+                        <th scope="col">chorioam</th>
+                        <th scope="col">prr membranes</th>
+                        <th scope="col">therapy</th>
+                        <th scope="col">respiratory</th>
+                        <th>dopamin</th>
+                        <th scope="col">enterocolitis</th>
+                        <th scope="col">hemorrhage</th>
+                        <th scope="col">constant</th>
+                        <th scope="col">weight</th>
+
+
+
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for i in data %}
+                    <tr scope="row" style="color: BLUE; background-color:#FFFCBB">
+                        <td>{{forloop.counter}}</td>
+                        <td>{{i.gestationalweek}}</td>
+                        <td>{{i.mechanicalventilation}}</td>
+                        <td>{{i.bloodtransfusion}}</td>
+                        <td>{{i.gender}}</td>
+                        <td>{{i.lateonsetsepsis}}</td>
+                        <td>{{i.chorioamnionitis}}</td>
+                        <td>{{i.pretermprematureruptureofmembranes}}</td>
+                        <td>{{i.antenatalsteroidtherapy}}</td>
+                        <td>{{i.respiratorydistresssyndrome}}</td>
+                        <td>{{i.dopamindobutamin}}</td>
+                        <td>{{i.necrotizingenterocolitis}}</td>
+                        <td>{{i.intraventricularhemorrhage}}</td>
+                        <td>{{i.constant}}</td>
+                        <td>{{i.weight}}</td>
+                    </tr>
+                    {% endfor %}
+
+
+                    </tbody>
+                </table>
+
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+{%endblock%}

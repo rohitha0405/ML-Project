@@ -1,0 +1,50 @@
+{%extends 'maternity/maternitybase.html'%}
+{%load static%}
+
+{%block contents%}
+<div class="site-section bg-info">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-12 text-center"><br/><br/><br/><br/><br/><br/><br/>
+            <span class="text-cursive h5 text-red d-block">Classification You Like</span>
+            <h2 class="text-white">Generalized Additive Model User Results </h2>
+               <table border="2px" class="table table-hover table-dark">
+                    <thead>
+                    <tr class="table-danger">
+                        <th scope="col">S.No</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Scale</th>
+                        <th scope="col">Deviance</th>
+                        <th scope="col">Pearson chi</th>
+                        <th scope="col">LLF</th>
+
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for i in data %}
+                    <tr scope="row" style="color: BLUE; background-color:#FFFCBB">
+                        <td>{{forloop.counter}}</td>
+                        <td>{{i.name}}</td>
+                        <td>{{i.scale}}</td>
+                        <td>{{i.deviance}}</td>
+                        <td>{{i.pearson_chi2}}</td>
+                        <td>{{i.llf}}</td>
+
+
+
+                    </tr>
+                    {% endfor %}
+
+
+                    </tbody>
+                </table>
+
+          </div>
+        </div>
+        <div class="row">
+
+        </div>
+      </div>
+    </div>
+
+{%endblock%}

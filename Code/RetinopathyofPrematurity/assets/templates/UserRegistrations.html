@@ -1,0 +1,89 @@
+{%extends 'base.html'%}
+{%load static%}
+{%block contents%}
+
+<div class="ftco-blocks-cover-1">
+
+      <div class="site-section-cover overlay">
+        <div class="container">
+          <div class="row align-items-center ">
+            <div class="col-md-5 mt-5 pt-5">
+              <br/>
+              <h1 class="mb-3 font-weight-bold text-teal">User Registrations</h1>
+
+              <p><form action="{%url 'UserRegisterActions'%}" method="POST" class="text-primary" style="width:100%">
+                    {% csrf_token %}
+                    <table>
+                        <tr>
+                            <td class="text-primary">Customer Name</td>
+                            <td>{{form.name}}</td>
+                        </tr>
+                        <tr>
+                            <td>Login ID</td>
+                            <td>{{form.loginid}}</td>
+                        </tr>
+                        <tr>
+                            <td>Password</td>
+                            <td>{{form.password}}</td>
+                        </tr>
+                        <tr>
+                            <td>Mobile</td>
+                            <td>{{form.mobile}}</td>
+                        </tr>
+                        <tr>
+                            <td>email</td>
+                            <td>{{form.email}}</td>
+                        </tr>
+                        <tr>
+                            <td>Locality</td>
+                            <td>{{form.locality}}</td>
+                        </tr>
+                        <tr>
+                            <td>Address</td>
+                            <td>{{form.address}}</td>
+                        </tr>
+                        <tr>
+                            <td>City</td>
+                            <td>{{form.city}}</td>
+                        </tr>
+                        <tr>
+                            <td>State</td>
+                            <td>{{form.state}}</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>{{form.status}}</td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <button class="btn btn-primary py-4 btn-custom-1" style="margin-left:20%;"
+                                        type="submit">
+                                    Register
+                                </button>
+                            </td>
+                        </tr>
+
+                        {% if messages %}
+                        {% for message in messages %}
+                        <font color='GREEN'> {{ message }}</font>
+                        {% endfor %}
+                        {% endif %}
+
+                    </table>
+
+                </form>
+                </p>
+
+            </div>
+            <div class="col-md-6 ml-auto align-self-end">
+              <img src="{% static 'images/kid_transparent.png'%}" alt="Image" class="img-fluid">
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+{%endblock%}

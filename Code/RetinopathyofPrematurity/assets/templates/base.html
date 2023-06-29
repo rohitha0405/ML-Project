@@ -1,0 +1,164 @@
+{%load static%}
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <title>RoP &mdash; Retinopathy of Premature</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=DM+Sans:300,400,700|Indie+Flower" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="{%static 'fonts/icomoon/style.css'%}">
+
+    <link rel="stylesheet" href="{%static 'css/bootstrap.min.css'%}">
+    <link rel="stylesheet" href="{%static 'css/bootstrap-datepicker.css'%}">
+    <link rel="stylesheet" href="{%static 'css/jquery.fancybox.min.css'%}">
+    <link rel="stylesheet" href="{%static 'css/owl.carousel.min.css'%}">
+    <link rel="stylesheet" href="{%static 'css/owl.theme.default.min.css'%}">
+    <link rel="stylesheet" href="{%static 'fonts/flaticon/font/flaticon.css'%}">
+    <link rel="stylesheet" href="{%static 'css/aos.css'%}">
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="{%static 'css/style.css'%}">
+
+  </head>
+
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+
+    <div class="site-wrap" id="home-section">
+
+      <div class="site-mobile-menu site-navbar-target">
+        <div class="site-mobile-menu-header">
+          <div class="site-mobile-menu-close mt-3">
+            <span class="icon-close2 js-menu-toggle"></span>
+          </div>
+        </div>
+        <div class="site-mobile-menu-body"></div>
+      </div>
+
+
+
+      <header class="site-navbar site-navbar-target" role="banner">
+
+        <div class="container mb-3">
+          <div class="d-flex align-items-center">
+            <div class="site-logo mr-auto">
+              <a href="{%url 'index'%}"><span class="text-primary">Retinopathy of Premature</span></a>
+            </div>
+
+          </div>
+        </div>
+
+
+        <div class="container">
+          <div class="menu-wrap d-flex align-items-center">
+            <span class="d-inline-block d-lg-none"><a href="#" class="text-black site-menu-toggle js-menu-toggle py-5"><span class="icon-menu h3 text-black"></span></a></span>
+
+
+
+              <nav class="site-navigation text-left mr-auto d-none d-lg-block" role="navigation">
+                <ul class="site-menu main-menu js-clone-nav mr-auto ">
+                  <li><a href="{%url 'index'%}">Home</a></li>
+                  <li><a href="{%url 'UserLogin'%}" class="nav-link">User</a></li>
+                  <li><a href="{%url 'AdminLogin'%}" class="nav-link">Admins</a></li>
+                  <li><a href="{%url 'MaternityLogin'%}" class="nav-link">Maternity</a></li>
+                  <li><a href="{%url 'UserRegister'%}" class="nav-link">Registrations</a></li>
+
+                </ul>
+              </nav>
+          </div>
+        </div>
+      </header>
+{%block contents%}
+
+{%endblock%}
+
+
+
+
+    <div class="site-section bg-info">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-12 text-center">
+            <span class="text-cursive h5 text-red d-block">Classification You Like</span>
+            <h2 class="text-white">Generalized Additive Model</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 mb-4 mb-lg-0">
+            <div class="package text-center bg-white">
+              <span class="img-wrap"><img src="{%static 'images/flaticon/svg/001-jigsaw.svg'%}" alt="Image" class="img-fluid"></span>
+              <h3 class="text-teal">World Health Organization</h3>
+              <p>WHO estimates that, out of the 130 million babies born annually, around 15 million babies are born prematurely, before 37 completed weeks of gestation. Approximately 1 million children die each year due to complications of preterm birth</p>
+
+            </div>
+          </div>
+          <div class="col-lg-4 mb-4 mb-lg-0">
+            <div class="package text-center bg-white">
+              <span class="img-wrap"><img src="{%static 'images/flaticon/svg/002-target.svg'%}" alt="Image" class="img-fluid"></span>
+              <h3 class="text-success">Retinopathy of Prematurity</h3>
+              <p>Retinopathy of Prematurity (RoP) was first reported by Terry in 1942 as a developmental, vascular, and proliferative retinal disorder occurring in the premature newborns’ retinas that have not completed vascularization</p>
+
+            </div>
+          </div>
+          <div class="col-lg-4 mb-4 mb-lg-0">
+            <div class="package text-center bg-white">
+              <span class="img-wrap"><img src="{%static 'images/flaticon/svg/003-mission.svg'%}" alt="Image" class="img-fluid"></span>
+              <h3 class="text-danger">Clinical data</h3>
+              <p>The clinical data for our analysis was collected by the Newborn Clinic meterenity hospitals. we will enter data as manual</p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+    <footer class="site-footer">
+      <div class="container">
+
+        <div class="row pt-5 mt-5 text-center">
+          <div class="col-md-12">
+            <div class="border-top pt-5">
+              <p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="#" target="_blank" >Alex Corporation</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </footer>
+
+    </div>
+
+    <script src="{%static 'js/jquery-3.3.1.min.js'%}"></script>
+    <script src="{%static 'js/jquery-migrate-3.0.0.js'%}"></script>
+    <script src="{%static 'js/popper.min.js'%}"></script>
+    <script src="{%static 'js/bootstrap.min.js'%}"></script>
+    <script src="{%static 'js/owl.carousel.min.js'%}"></script>
+    <script src="{%static 'js/jquery.sticky.js'%}"></script>
+    <script src="{%static 'js/jquery.waypoints.min.js'%}"></script>
+    <script src="{%static 'js/jquery.animateNumber.min.js'%}"></script>
+    <script src="{%static 'js/jquery.fancybox.min.js'%}"></script>
+    <script src="{%static 'js/jquery.stellar.min.js'%}"></script>
+    <script src="{%static 'js/jquery.easing.1.3.js'%}"></script>
+    <script src="{%static 'js/bootstrap-datepicker.min.js'%}"></script>
+    <script src="{%static 'js/aos.js'%}"></script>
+
+    <script src="{%static 'js/main.js'%}"></script>
+
+  </body>
+
+</html>
+

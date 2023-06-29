@@ -1,0 +1,32 @@
+{%extends 'users/userbase.html'%}
+{%load static%}
+{%block contents%}
+
+<div class="ftco-blocks-cover-1">
+
+      <div class="site-section-cover overlay">
+        <div class="container">
+          <div class="row align-items-center ">
+            <div class="col-md-5 mt-5 pt-5"><br/><br/><br/><br/><br/><br/>
+              <span class="text-cursive h5 text-red">Linear GA2M Results</span>
+              <h3 class="mb-3 font-weight-bold text-teal">
+                  Scale  <strong class="btn btn-block btn-primary text-white py-3 px-5"> {{scale}}</strong> <br/>
+                  Deviance <strong class="btn btn-block btn-primary text-white py-3 px-5"> {{deviance}} </strong><br/>
+                  Pearson_chi Square <strong class="btn btn-block btn-primary text-white py-3 px-5">{{pearson_chi2}}</strong> <br/>
+                  llf Low-Level Features  <strong class="btn btn-block btn-primary text-white py-3 px-5">{{llf}}</strong> <br/>
+
+              </h3>
+
+
+            </div>
+            <div class="col-md-6 ml-auto align-self-end">
+              <img src="{% static 'images/kid_transparent.png'%}" alt="Image" class="img-fluid">
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+{%endblock%}
